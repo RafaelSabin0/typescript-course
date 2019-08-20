@@ -1,0 +1,48 @@
+1- Primeiro Inicialize a aplicação:
+
+$ npm init -f
+
+2- Vamos importar a lib/pacote "lodash" como exemplo:
+
+$ npm install --save lodash
+
+3- Importando as definições de tipo dessa lib: 
+
+$ npm install --save-dev @types/lodash
+
+
+4- Se necessário defina os tipos no seu arquivo "tsconfig.json"(Caso seja necessário):
+
+-- Arquivo tsconfig.json: 
+
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "outDir": "js",
+        "noEmitOnError": false,
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    }
+}
+
+6 - Para usar essa biblioteca lá na aplicação, vamos no arquivo de execução,
+e adicionamos a seguinte linha de importação da lib: 
+
+import * as _ from 'lodash'
+
+
+7- Agora rodando: 
+
+"
+Comando: 
+$ node js/AulaClasses.js 
+
+Resultado: 
+
+==========Typescript Examples===========
+Entering hyperspace with hyperdrive
+Failed to jump into hyperspace
+Is falcon good for the job? NO 
+"
